@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Products - Ferretería Antillana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<header>
+    <i class="fas fa-hammer"></i> FERRETERÍA ANTILLANA
+</header>
+
+<nav>
+    <a href="/index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="/pages/article.html"><i class="fas fa-box"></i> Article</a>
+    <a href="/pages/supplier.html"><i class="fas fa-truck"></i> Supplier</a>
+    <a href="/pages/sale.html"><i class="fas fa-cash-register"></i> Sale</a>
+    <a href="/pages/store.html"><i class="fas fa-warehouse"></i> Store</a>
+</nav>
+
+<h3>Manage Products</h3>
+
+<div id="panel">
+    <button class="btn-blue" onclick="listar()"><i class="fas fa-box"></i> List</button>
+    <button class="btn-blue" onclick="buscarId()"><i class="fas fa-search"></i> Search</button>
+    <hr>
+    <button class="btn-green" onclick="mostrarActualizar()"><i class="fas fa-edit"></i> Update</button>
+    <button class="btn-gray" onclick="mostrarEliminar()"><i class="fas fa-trash"></i> Delete</button>
+    <button class="btn-orange" onclick="mostrarInsertar()"><i class="fas fa-plus"></i> Add</button>
+</div>
+
+<div id="formularios" style="margin: 20px;"></div>
+<div id="tablaResultados"></div>
+
+<script src="/js/store.js"></script>
+</body>
+</html>
