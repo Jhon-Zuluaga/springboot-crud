@@ -4,19 +4,20 @@ package com.hibernate.ferreteria.DTOs;
 
 public class ArticleDTO {
     private long id;
-    private String nombre;
-    private Double precio;
+    private String name;
+    private Double price;
     private Integer stock;
+    private Integer supplierId; // ← agregar
+    private Integer storeId;
 
-    // Generar constructor
-    public ArticleDTO(long id, String nombre, Double precio, Integer stock) {
+    public ArticleDTO(long id, String name, Double price, Integer stock, Integer supplierId, Integer storeId) {
         this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
+        this.name = name;
+        this.price = price;
         this.stock = stock;
+        this.supplierId = supplierId;
+        this.storeId = storeId;
     }
-
-    // Generar get y set
 
     public long getId() {
         return id;
@@ -26,20 +27,20 @@ public class ArticleDTO {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Double getPrecio() {
-        return precio;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setPrecio(Double precio) {
-        this.precio = precio;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 
     public Integer getStock() {
@@ -50,13 +51,19 @@ public class ArticleDTO {
         this.stock = stock;
     }
 
-    @Override
-    public String toString() {
-        return "ArticleDTO{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", precio=" + precio +
-                ", stock=" + stock +
-                '}';
+    public Integer getSupplierId() {
+        return supplierId;
+    }
+
+    public void setSupplierId(Integer supplierId) {
+        this.supplierId = supplierId;
+    }
+
+    public Integer getStoreId() {
+        return storeId;
+    }
+
+    public void setStoreId(Integer storeId) {
+        this.storeId = storeId;
     }
 }

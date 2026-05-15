@@ -16,12 +16,20 @@ public class Article {
     @Column(name = "id") // OPCIONAL
     private int id;
 
-    @Column(name = "nombre")
-    private String nombre;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "precio")
-    private Double precio;
+    @Column(name = "price")
+    private Double price;
 
     @Column(name = "stock")
     private Integer stock;
+
+    @ManyToOne
+    @JoinColumn(name = "supplier_id")
+    private Supplier supplier;
+
+    @ManyToOne
+    @JoinColumn(name = "store_id")
+    private Store store;
 }
